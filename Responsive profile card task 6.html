@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team Profiles</title>
+
+    <style>
+        /* Basic page design */
+        body {
+            background-color: #eee8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+            color: #34206f;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #62558f;
+            margin-bottom: 35px;
+        }
+
+        /* Cards layout using Flexbox */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Individual profile card */
+        .card {
+            background-color: white;
+            width: 300px;
+            padding: 25px;
+            border: 2px solid #d4c4ff;
+            border-radius: 15px;
+            box-sizing: border-box;
+            box-shadow: 0 5px 15px #d6cafa;
+            transition: transform 0.3s;
+        }
+
+        /* Card hover effect */
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Profile picture */
+        .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #b99aff;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            color: #492397;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #45416e;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Skills */
+        .skills {
+            margin: 20px 0;
+        }
+
+        .skill {
+            display: inline-block;
+            background-color: #eee5ff;
+            color: #5529b5;
+            padding: 8px 14px;
+            margin: 4px;
+            border-radius: 20px;
+        }
+
+        /* View Profile button */
+        button {
+            background-color: #6843bd;
+            color: white;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #47218f;
+        }
+
+        /* Message shown by JavaScript */
+        .info {
+            display: none;
+            background-color: #f1e9ff;
+            color: #5529b5 !important;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 35px;
+            color: #7354bf;
+        }
+
+        /* Dark mode button */
+        .mode-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50%;
+            padding: 12px 16px;
+            font-size: 20px;
+        }
+
+        /* Dark mode design */
+        body.dark {
+            background-color: #191526;
+            color: white;
+        }
+
+        body.dark .subtitle,
+        body.dark footer {
+            color: #d0baff;
+        }
+
+        body.dark .card {
+            background-color: #29213b;
+            border-color: #6e51a7;
+        }
+
+        body.dark .card p {
+            color: #eee5ff;
+        }
+
+        body.dark .skill,
+        body.dark .info {
+            background-color: #403253;
+            color: #f1e7ff !important;
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>♡ Our Team ♡</h1>
+    <p class="subtitle">Meet Our Students ♥</p>
+
+    <div class="container">
+
+        <!-- First Card -->
+        <div class="card">
+
+            <img src="c:\Users\superior\Pictures\ali.jpg.jpeg" alt="Ali's Profile Picture">
+
+            <h2>Ali</h2>
+
+            <p>
+                I am a frontend development learner.
+                I love coding and building beautiful websites.
+            </p>
+
+            <h3>Skills</h3>
+
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+            </div>
+
+            <button onclick="showInfo('info1')">
+                View Profile
+            </button>
+
+            <p id="info1" class="info">
+                Thank you for visiting my profile!
+            </p>
+
+        </div>
+
+        <!-- Second Card -->
+        <div class="card">
+
+            <img src="c:\Users\superior\Pictures\zunaira.jpg.jpeg" alt="Zunaira's Profile Picture">
+
+            <h2>Zunaira</h2>
+
+            <p>
+                I am interested in web development.
+                I enjoy learning new things and exploring technology.
+            </p>
+
+            <h3>Skills</h3>
+
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">C++</span>
+            </div>
+
+            <button onclick="showInfo('info2')">
+                View Profile
+            </button>
+
+            <p id="info2" class="info">
+                Thank you for visiting my profile!
+            </p>
+
+        </div>
+
+        <!-- Third Card -->
+        <div class="card">
+
+            <img src="c:\Users\superior\Pictures\sara.jpg" alt="Sara's Profile Picture">
+
+            <h2>Sara</h2>
+
+            <p>
+                I am a curious learner and I love
+                exploring new technologies.
+                My goal is to become a great developer.
+            </p>
+
+            <h3>Skills</h3>
+
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">Python</span>
+            </div>
+
+            <button onclick="showInfo('info3')">
+                View Profile
+            </button>
+
+            <p id="info3" class="info">
+                Thank you for visiting my profile!
+            </p>
+
+        </div>
+
+    </div>
+
+    <footer>
+        — Keep Learning ♥ Keep Growing —
+    </footer>
+
+    <!-- Dark mode button -->
+    <button class="mode-button" onclick="toggleMode()">
+        ☾
+    </button>
+
+    <script>
+        // Show or hide profile information
+        function showInfo(id) {
+
+            let info = document.getElementById(id);
+
+            info.classList.toggle("info");
+            info.style.display =
+                info.style.display === "block" ? "none" : "block";
+        }
+
+        // Change between light mode and dark mode
+        function toggleMode() {
+
+            document.body.classList.toggle("dark");
+
+        }
+    </script>
+
+</body>
+</html>
